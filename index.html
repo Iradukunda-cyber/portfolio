@@ -3,37 +3,31 @@
 <head>
     <meta charset="UTF-8">
 
-    <!-- Responsive Design -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO -->
-    <title>Iradukunda Josee | Software Engineering Portfolio</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
         name="description"
-        content="Professional portfolio of Iradukunda Josee, a Software Engineering student focused on web development, programming, databases and software solutions."
+        content="Professional portfolio of Iradukunda Josee, Software Engineering student and web developer."
     >
 
     <meta
         name="keywords"
-        content="Iradukunda Josee, Software Engineering, Web Developer, Rwanda, Portfolio, JavaScript, Python, Java, Database"
+        content="Iradukunda Josee, Software Engineering, Web Developer, Rwanda, JavaScript, Python, Java, Database"
     >
 
     <meta name="author" content="Iradukunda Josee">
 
-    <!-- Open Graph -->
     <meta property="og:title" content="Iradukunda Josee | Software Engineering Portfolio">
     <meta
         property="og:description"
-        content="Explore my software engineering skills, projects, education and experience."
+        content="Software Engineering portfolio showcasing skills, projects, education and experience."
     >
     <meta property="og:type" content="website">
 
-    <!-- Favicon -->
-    <link
-        rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>IJ</text></svg>"
-    >
+    <title>Iradukunda Josee | Software Engineering Portfolio</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,1358 +50,1032 @@
 
 <body>
 
-    <!-- =========================
-         SCROLL PROGRESS
-    ========================== -->
-    <div class="scroll-progress" id="scrollProgress"></div>
+<!-- =========================
+     HEADER
+========================= -->
+<header class="header" id="header">
 
+    <div class="container nav-container">
 
-    <!-- =========================
-         HEADER / NAVIGATION
-    ========================== -->
-    <header class="header" id="header">
+        <a href="#home" class="logo">
+            <span>IJ</span>
+        </a>
 
-        <div class="container nav-container">
+        <nav class="nav" id="nav">
 
-            <!-- Logo -->
-            <a href="#home" class="logo">
-                <span class="logo-mark">IJ</span>
-
-                <span class="logo-text">
-                    Iradukunda<span>.</span>
-                </span>
+            <a href="#home" class="nav-link active" data-i18n="navHome">
+                Home
             </a>
 
+            <a href="#about" class="nav-link" data-i18n="navAbout">
+                About
+            </a>
 
-            <!-- Desktop Navigation -->
-            <nav class="nav" id="nav">
+            <a href="#skills" class="nav-link" data-i18n="navSkills">
+                Skills
+            </a>
 
-                <a href="#home" class="nav-link active" data-i18n="nav.home">
-                    Home
-                </a>
+            <a href="#projects" class="nav-link" data-i18n="navProjects">
+                Projects
+            </a>
 
-                <a href="#about" class="nav-link" data-i18n="nav.about">
-                    About
-                </a>
+            <a href="#education" class="nav-link" data-i18n="navEducation">
+                Education
+            </a>
 
-                <a href="#skills" class="nav-link" data-i18n="nav.skills">
-                    Skills
-                </a>
+            <a href="#experience" class="nav-link" data-i18n="navExperience">
+                Experience
+            </a>
 
-                <a href="#projects" class="nav-link" data-i18n="nav.projects">
-                    Projects
-                </a>
+            <a href="#contact" class="nav-link" data-i18n="navContact">
+                Contact
+            </a>
 
-                <a href="#education" class="nav-link" data-i18n="nav.education">
-                    Education
-                </a>
+        </nav>
 
-                <a href="#experience" class="nav-link" data-i18n="nav.experience">
-                    Experience
-                </a>
+        <div class="nav-actions">
 
-                <a href="#contact" class="nav-link" data-i18n="nav.contact">
-                    Contact
-                </a>
+            <!-- Language -->
+            <div class="language-wrapper">
 
-            </nav>
+                <button
+                    class="language-btn"
+                    id="languageBtn"
+                    aria-label="Change language"
+                >
+                    <i class="fa-solid fa-language"></i>
+                    <span id="currentLanguage">EN</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
 
+                <div class="language-menu" id="languageMenu">
 
-            <!-- Right Controls -->
-            <div class="nav-controls">
-
-                <!-- Language -->
-                <div class="language-selector">
-
-                    <button
-                        class="language-button"
-                        id="languageButton"
-                        aria-label="Select language"
-                    >
-                        <i class="fa-solid fa-globe"></i>
-                        <span id="currentLanguage">EN</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-
-                    <div class="language-menu" id="languageMenu">
-
-                        <button data-language="en">
-                            🇬🇧 English
-                        </button>
-
-                        <button data-language="rw">
-                            🇷🇼 Kinyarwanda
-                        </button>
-
-                        <button data-language="fr">
-                            🇫🇷 Français
-                        </button>
-
-                    </div>
+                    <button data-lang="en">English</button>
+                    <button data-lang="rw">Kinyarwanda</button>
+                    <button data-lang="fr">Français</button>
 
                 </div>
 
+            </div>
 
-                <!-- Theme Toggle -->
-                <button
-                    class="theme-toggle"
-                    id="themeToggle"
-                    aria-label="Toggle dark and light mode"
+            <!-- Theme -->
+            <button
+                class="theme-toggle"
+                id="themeToggle"
+                aria-label="Toggle dark and light mode"
+            >
+                <i class="fa-solid fa-sun"></i>
+            </button>
+
+            <!-- CV -->
+            <a
+                href="assets/Josee-CV.pdf"
+                class="nav-cv"
+                target="_blank"
+                rel="noopener"
+            >
+                <i class="fa-solid fa-file-pdf"></i>
+                <span data-i18n="cv">CV</span>
+            </a>
+
+            <!-- Mobile menu -->
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<!-- =========================
+     HERO
+========================= -->
+<section class="hero section" id="home">
+
+    <div class="hero-grid"></div>
+
+    <div class="container hero-container">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                <span class="status-dot"></span>
+                <span data-i18n="available">
+                    Available for opportunities
+                </span>
+            </div>
+
+            <p class="hero-small" data-i18n="hello">
+                HELLO, I'M
+            </p>
+
+            <h1>
+                Iradukunda
+                <span>Josee</span>
+            </h1>
+
+            <h2 data-i18n="heroTitle">
+                Software Engineering Student
+            </h2>
+
+            <p
+                class="hero-description"
+                data-i18n="heroDescription"
+            >
+                I build modern, responsive and user-focused digital
+                experiences while developing practical software solutions.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="btn btn-primary">
+                    <span data-i18n="viewWork">Explore My Work</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a
+                    href="assets/Josee-CV.pdf"
+                    class="btn btn-outline"
+                    target="_blank"
+                    rel="noopener"
                 >
-                    <i class="fa-solid fa-sun"></i>
-                    <i class="fa-solid fa-moon"></i>
-                </button>
+                    <i class="fa-solid fa-download"></i>
+                    <span data-i18n="downloadCV">Download CV</span>
+                </a>
 
+            </div>
 
-                <!-- Mobile Menu -->
-                <button
-                    class="menu-toggle"
-                    id="menuToggle"
-                    aria-label="Open navigation menu"
+            <div class="social-links">
+
+                <a
+                    href="https://github.com/iradukunda-cyber"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
                 >
-                    <i class="fa-solid fa-bars"></i>
-                </button>
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                >
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
 
             </div>
 
         </div>
 
-    </header>
+
+        <div class="hero-visual">
+
+            <div class="code-card">
+
+                <div class="code-header">
+
+                    <div class="window-buttons">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <span>developer.js</span>
+
+                </div>
+
+                <div class="code-body">
+
+                    <p>
+                        <span class="code-purple">const</span>
+                        developer =
+                        <span class="code-blue">{</span>
+                    </p>
+
+                    <p class="indent">
+                        name:
+                        <span class="code-green">
+                            "Iradukunda Josee"
+                        </span>,
+                    </p>
+
+                    <p class="indent">
+                        role:
+                        <span class="code-green">
+                            "Software Engineer"
+                        </span>,
+                    </p>
+
+                    <p class="indent">
+                        skills:
+                        <span class="code-blue">[</span>
+                    </p>
+
+                    <p class="indent-2">
+                        <span class="code-green">"Web Development"</span>,
+                    </p>
+
+                    <p class="indent-2">
+                        <span class="code-green">"JavaScript"</span>,
+                    </p>
+
+                    <p class="indent-2">
+                        <span class="code-green">"Python"</span>,
+                    </p>
+
+                    <p class="indent-2">
+                        <span class="code-green">"Databases"</span>
+                    </p>
+
+                    <p class="indent">
+                        <span class="code-blue">]</span>
+                    </p>
+
+                    <p>
+                        <span class="code-blue">}</span>;
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
+<!-- =========================
+     ABOUT
+========================= -->
+<section class="section about" id="about">
 
-    <!-- =========================
-         HERO SECTION
-    ========================== -->
-    <main>
+    <div class="container">
 
-        <section class="hero section" id="home">
+        <div class="section-heading">
 
-            <div class="container hero-grid">
+            <span class="section-number">01</span>
 
-                <!-- Hero Text -->
-                <div class="hero-content">
+            <div>
+                <p class="section-label" data-i18n="aboutLabel">
+                    ABOUT ME
+                </p>
 
-                    <div class="availability-badge">
-                        <span class="status-dot"></span>
+                <h2 data-i18n="aboutTitle">
+                    Turning ideas into digital experiences.
+                </h2>
+            </div>
 
-                        <span data-i18n="hero.available">
-                            Open to opportunities
+        </div>
+
+
+        <div class="about-grid">
+
+            <div class="profile-card reveal">
+
+                <div class="profile-image-wrapper">
+
+                    <img
+                        src="assets/profile.jpg"
+                        alt="Iradukunda Josee"
+                        class="profile-image"
+                    >
+
+                </div>
+
+                <h3>Iradukunda Josee</h3>
+
+                <p data-i18n="profileRole">
+                    Software Engineering Student
+                </p>
+
+                <div class="profile-line"></div>
+
+                <div class="profile-stats">
+
+                    <div>
+                        <strong>03+</strong>
+                        <span data-i18n="yearsLearning">
+                            Years Learning
                         </span>
                     </div>
 
-
-                    <p class="hero-intro" data-i18n="hero.greeting">
-                        Hello, I'm
-                    </p>
-
-
-                    <h1 class="hero-title">
-                        Iradukunda
-                        <span>Josee</span>
-                    </h1>
-
-
-                    <h2 class="hero-role" data-i18n="hero.role">
-                        Software Engineering Student
-                    </h2>
-
-
-                    <p class="hero-description" data-i18n="hero.description">
-                        I build modern, responsive and user-focused digital
-                        experiences while developing practical skills in
-                        software engineering, web development, programming
-                        and database systems.
-                    </p>
-
-
-                    <!-- Hero Buttons -->
-                    <div class="hero-buttons">
-
-                        <a
-                            href="#projects"
-                            class="btn btn-primary"
-                        >
-                            <span data-i18n="hero.viewProjects">
-                                View My Projects
-                            </span>
-
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-
-
-                        <a
-                            href="assets/Josee-CV.pdf"
-                            class="btn btn-secondary"
-                            download
-                        >
-                            <i class="fa-solid fa-file-arrow-down"></i>
-
-                            <span data-i18n="hero.downloadCV">
-                                Download CV
-                            </span>
-                        </a>
-
+                    <div>
+                        <strong>05+</strong>
+                        <span data-i18n="projects">
+                            Projects
+                        </span>
                     </div>
 
-
-                    <!-- Social Links -->
-                    <div class="hero-socials">
-
-                        <span data-i18n="hero.connect">
-                            Connect with me
+                    <div>
+                        <strong>03</strong>
+                        <span data-i18n="languages">
+                            Languages
                         </span>
-
-                        <div class="social-links">
-
-                            <a
-                                href="https://github.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="GitHub"
-                            >
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-
-                            <a
-                                href="https://www.linkedin.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="LinkedIn"
-                            >
-                                <i class="fa-brands fa-linkedin-in"></i>
-                            </a>
-
-                            <a
-                                href="mailto:your-email@example.com"
-                                aria-label="Email"
-                            >
-                                <i class="fa-solid fa-envelope"></i>
-                            </a>
-
-                        </div>
-
                     </div>
 
                 </div>
 
+            </div>
 
 
-                <!-- Hero Code Card -->
-                <div class="hero-visual">
+            <div class="about-content reveal">
 
-                    <div class="code-window">
+                <p
+                    class="lead"
+                    data-i18n="aboutText1"
+                >
+                    I am passionate about software development,
+                    problem solving and creating useful digital
+                    experiences.
+                </p>
 
-                        <div class="window-header">
+                <p data-i18n="aboutText2">
+                    My interests include web development, databases,
+                    software engineering and building practical
+                    technology solutions.
+                </p>
 
-                            <div class="window-dots">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
+                <p data-i18n="aboutText3">
+                    I continuously improve my technical skills through
+                    academic work, personal projects and hands-on
+                    experimentation.
+                </p>
 
-                            <span class="window-title">
-                                software_engineer.js
-                            </span>
+                <div class="about-highlights">
 
-                        </div>
-
-
-                        <div class="code-content">
-
-                            <div>
-                                <span class="code-number">01</span>
-                                <span class="code-keyword">const</span>
-                                <span class="code-variable">developer</span>
-                                =
-                                <span class="code-bracket">{</span>
-                            </div>
-
-                            <div class="code-indent">
-                                <span class="code-property">name:</span>
-                                <span class="code-string">
-                                    "Iradukunda Josee"
-                                </span>,
-                            </div>
-
-                            <div class="code-indent">
-                                <span class="code-property">role:</span>
-                                <span class="code-string">
-                                    "Software Engineer"
-                                </span>,
-                            </div>
-
-                            <div class="code-indent">
-                                <span class="code-property">location:</span>
-                                <span class="code-string">
-                                    "Rwanda"
-                                </span>,
-                            </div>
-
-                            <div class="code-indent">
-                                <span class="code-property">focus:</span>
-                                <span class="code-bracket">[</span>
-                            </div>
-
-                            <div class="code-double-indent">
-                                <span class="code-string">
-                                    "Web Development"
-                                </span>,
-                            </div>
-
-                            <div class="code-double-indent">
-                                <span class="code-string">
-                                    "Programming"
-                                </span>,
-                            </div>
-
-                            <div class="code-double-indent">
-                                <span class="code-string">
-                                    "Databases"
-                                </span>
-                            </div>
-
-                            <div class="code-indent">
-                                <span class="code-bracket">]</span>
-                            </div>
-
-                            <div>
-                                <span class="code-bracket">}</span>;
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- Floating Cards -->
-                    <div class="floating-card floating-card-one">
+                    <div>
                         <i class="fa-solid fa-code"></i>
-
-                        <div>
-                            <strong>Web</strong>
-                            <small>Development</small>
-                        </div>
+                        <span data-i18n="cleanCode">
+                            Clean & Structured Code
+                        </span>
                     </div>
 
+                    <div>
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        <span data-i18n="responsive">
+                            Responsive Design
+                        </span>
+                    </div>
 
-                    <div class="floating-card floating-card-two">
-                        <i class="fa-solid fa-database"></i>
+                    <div>
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <span data-i18n="problemSolving">
+                            Problem Solving
+                        </span>
+                    </div>
 
-                        <div>
-                            <strong>Database</strong>
-                            <small>Systems</small>
-                        </div>
+                    <div>
+                        <i class="fa-solid fa-rocket"></i>
+                        <span data-i18n="continuousLearning">
+                            Continuous Learning
+                        </span>
                     </div>
 
                 </div>
 
             </div>
 
+        </div>
 
-            <!-- Scroll Down -->
-            <a href="#about" class="scroll-down">
+    </div>
 
-                <span data-i18n="hero.scroll">
-                    Scroll to explore
-                </span>
-
-                <i class="fa-solid fa-arrow-down"></i>
-
-            </a>
-
-        </section>
+</section>
 
 
+<!-- =========================
+     SKILLS
+========================= -->
+<section class="section skills-section" id="skills">
 
-        <!-- =========================
-             ABOUT SECTION
-        ========================== -->
-        <section class="section about-section" id="about">
+    <div class="container">
 
-            <div class="container">
+        <div class="section-heading">
 
-                <div class="section-heading">
+            <span class="section-number">02</span>
 
-                    <span class="section-number">01</span>
+            <div>
+                <p class="section-label" data-i18n="skillsLabel">
+                    MY SKILLS
+                </p>
 
-                    <div>
-                        <p class="section-label" data-i18n="about.label">
-                            ABOUT ME
-                        </p>
+                <h2 data-i18n="skillsTitle">
+                    Technologies I work with.
+                </h2>
+            </div>
 
-                        <h2 data-i18n="about.title">
-                            Turning ideas into digital solutions.
-                        </h2>
-                    </div>
+        </div>
 
+
+        <div class="skills-grid">
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    <i class="fa-solid fa-globe"></i>
                 </div>
 
+                <h3 data-i18n="webDevelopment">
+                    Web Development
+                </h3>
 
-                <div class="about-grid">
+                <p data-i18n="webDescription">
+                    Building responsive and modern websites.
+                </p>
 
-                    <!-- Profile Card -->
-                    <div class="profile-card">
+                <div class="skill-tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                </div>
 
-                        <div class="profile-avatar">
-                            IJ
-                        </div>
-
-                        <h3>
-                            Iradukunda Josee
-                        </h3>
-
-                        <p data-i18n="about.student">
-                            Software Engineering Student
-                        </p>
+            </div>
 
 
-                        <div class="profile-line"></div>
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    <i class="fa-solid fa-terminal"></i>
+                </div>
+
+                <h3 data-i18n="programming">
+                    Programming
+                </h3>
+
+                <p data-i18n="programmingDescription">
+                    Developing software solutions using programming
+                    languages and structured problem solving.
+                </p>
+
+                <div class="skill-tags">
+                    <span>Java</span>
+                    <span>Python</span>
+                    <span>JavaScript</span>
+                </div>
+
+            </div>
 
 
-                        <div class="profile-details">
+            <div class="skill-card reveal">
 
-                            <div>
-                                <i class="fa-solid fa-location-dot"></i>
-                                <span>Rwanda</span>
-                            </div>
+                <div class="skill-icon">
+                    <i class="fa-solid fa-database"></i>
+                </div>
 
-                            <div>
-                                <i class="fa-solid fa-code"></i>
-                                <span>Software Engineering</span>
-                            </div>
+                <h3 data-i18n="databases">
+                    Databases
+                </h3>
 
-                            <div>
-                                <i class="fa-solid fa-laptop-code"></i>
-                                <span>Web Development</span>
-                            </div>
+                <p data-i18n="databaseDescription">
+                    Designing and working with relational databases.
+                </p>
 
-                        </div>
+                <div class="skill-tags">
+                    <span>SQL</span>
+                    <span>MySQL</span>
+                    <span>PostgreSQL</span>
+                </div>
 
-                    </div>
-
-
-                    <!-- About Content -->
-                    <div class="about-content">
-
-                        <p
-                            class="lead-text"
-                            data-i18n="about.lead"
-                        >
-                            I am passionate about technology and software
-                            development, with a strong interest in building
-                            useful and reliable digital solutions.
-                        </p>
+            </div>
 
 
-                        <p data-i18n="about.text">
-                            My learning journey focuses on software engineering,
-                            web development, programming, databases and
-                            problem-solving. I enjoy transforming ideas into
-                            functional applications and continuously improving
-                            my technical skills through practical projects.
-                        </p>
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    <i class="fa-solid fa-gears"></i>
+                </div>
+
+                <h3 data-i18n="softwareEngineering">
+                    Software Engineering
+                </h3>
+
+                <p data-i18n="softwareDescription">
+                    Applying software development concepts,
+                    testing and structured development practices.
+                </p>
+
+                <div class="skill-tags">
+                    <span>OOP</span>
+                    <span>SDLC</span>
+                    <span>Testing</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
-                        <p data-i18n="about.text2">
-                            I believe good software should be simple to use,
-                            responsive, maintainable and designed around real
-                            user needs.
-                        </p>
+<!-- =========================
+     PROJECTS
+========================= -->
+<section class="section projects-section" id="projects">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-number">03</span>
+
+            <div>
+                <p class="section-label" data-i18n="projectsLabel">
+                    PROJECTS
+                </p>
+
+                <h2 data-i18n="projectsTitle">
+                    Things I have been building.
+                </h2>
+            </div>
+
+        </div>
 
 
-                        <!-- Stats -->
-                        <div class="stats-grid">
+        <div class="projects-grid">
 
-                            <div class="stat-item">
-                                <strong>03+</strong>
-                                <span data-i18n="about.statProjects">
-                                    Projects
-                                </span>
-                            </div>
+            <article class="project-card reveal">
 
-                            <div class="stat-item">
-                                <strong>03</strong>
-                                <span data-i18n="about.statLanguages">
-                                    Languages
-                                </span>
-                            </div>
+                <div class="project-number">
+                    01
+                </div>
 
-                            <div class="stat-item">
-                                <strong>100%</strong>
-                                <span data-i18n="about.statLearning">
-                                    Learning Mindset
-                                </span>
-                            </div>
+                <div class="project-icon">
+                    <i class="fa-solid fa-newspaper"></i>
+                </div>
 
-                        </div>
+                <h3>Rwanda 24</h3>
 
-                    </div>
+                <p data-i18n="project1Description">
+                    A news platform concept focused on presenting
+                    trending stories from Rwanda and beyond.
+                </p>
+
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <a href="#" class="project-link disabled-link">
+                    <span data-i18n="viewProject">
+                        View Project
+                    </span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </article>
+
+
+            <article class="project-card reveal">
+
+                <div class="project-number">
+                    02
+                </div>
+
+                <div class="project-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <h3>Student Management System</h3>
+
+                <p data-i18n="project2Description">
+                    A database-focused application concept for
+                    managing student information and records.
+                </p>
+
+                <div class="project-tech">
+                    <span>Java</span>
+                    <span>SQL</span>
+                    <span>Database</span>
+                </div>
+
+                <a href="#" class="project-link disabled-link">
+                    <span data-i18n="viewProject">
+                        View Project
+                    </span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </article>
+
+
+            <article class="project-card reveal">
+
+                <div class="project-number">
+                    03
+                </div>
+
+                <div class="project-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+
+                <h3>Personal Portfolio</h3>
+
+                <p data-i18n="project3Description">
+                    A responsive professional portfolio with
+                    multilingual support, theme switching and
+                    interactive features.
+                </p>
+
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <a href="#contact" class="project-link">
+                    <span data-i18n="viewProject">
+                        View Project
+                    </span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
+<section class="section education-section" id="education">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-number">04</span>
+
+            <div>
+                <p class="section-label" data-i18n="educationLabel">
+                    EDUCATION
+                </p>
+
+                <h2 data-i18n="educationTitle">
+                    Academic background.
+                </h2>
+            </div>
+
+        </div>
+
+
+        <div class="timeline">
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-date">
+                    <span data-i18n="current">
+                        Current
+                    </span>
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>
+                        Bachelor of Software Engineering
+                    </h3>
+
+                    <p class="timeline-place">
+                        Faculty of Information Technology
+                    </p>
+
+                    <p data-i18n="educationDescription">
+                        Software engineering studies focused on
+                        programming, databases, software development
+                        and information technology.
+                    </p>
 
                 </div>
 
             </div>
 
-        </section>
 
+            <div class="timeline-item reveal">
 
+                <div class="timeline-dot"></div>
 
-        <!-- =========================
-             SKILLS SECTION
-        ========================== -->
-        <section class="section skills-section" id="skills">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <span class="section-number">02</span>
-
-                    <div>
-                        <p class="section-label" data-i18n="skills.label">
-                            MY SKILLS
-                        </p>
-
-                        <h2 data-i18n="skills.title">
-                            Technologies & capabilities.
-                        </h2>
-                    </div>
-
+                <div class="timeline-date">
+                    <span data-i18n="previous">
+                        Previous
+                    </span>
                 </div>
 
+                <div class="timeline-content">
 
-                <div class="skills-grid">
+                    <h3 data-i18n="secondaryEducation">
+                        Secondary Education
+                    </h3>
 
-                    <!-- Web Development -->
-                    <article class="skill-card">
+                    <p class="timeline-place">
+                        Rwanda
+                    </p>
 
-                        <div class="skill-icon">
-                            <i class="fa-solid fa-globe"></i>
-                        </div>
-
-                        <h3 data-i18n="skills.web.title">
-                            Web Development
-                        </h3>
-
-                        <p data-i18n="skills.web.text">
-                            Building responsive and user-friendly websites
-                            using modern web technologies.
-                        </p>
-
-                        <div class="skill-tags">
-
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                            <span>Responsive Design</span>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- Programming -->
-                    <article class="skill-card">
-
-                        <div class="skill-icon">
-                            <i class="fa-solid fa-terminal"></i>
-                        </div>
-
-                        <h3 data-i18n="skills.programming.title">
-                            Programming
-                        </h3>
-
-                        <p data-i18n="skills.programming.text">
-                            Developing logical solutions and applications
-                            using programming concepts.
-                        </p>
-
-                        <div class="skill-tags">
-
-                            <span>Java</span>
-                            <span>Python</span>
-                            <span>JavaScript</span>
-                            <span>OOP</span>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- Databases -->
-                    <article class="skill-card">
-
-                        <div class="skill-icon">
-                            <i class="fa-solid fa-database"></i>
-                        </div>
-
-                        <h3 data-i18n="skills.database.title">
-                            Databases
-                        </h3>
-
-                        <p data-i18n="skills.database.text">
-                            Working with relational databases, queries and
-                            structured information.
-                        </p>
-
-                        <div class="skill-tags">
-
-                            <span>SQL</span>
-                            <span>MySQL</span>
-                            <span>PostgreSQL</span>
-                            <span>Database Design</span>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- Software Engineering -->
-                    <article class="skill-card">
-
-                        <div class="skill-icon">
-                            <i class="fa-solid fa-gears"></i>
-                        </div>
-
-                        <h3 data-i18n="skills.software.title">
-                            Software Engineering
-                        </h3>
-
-                        <p data-i18n="skills.software.text">
-                            Applying software development principles to
-                            plan, build, test and improve applications.
-                        </p>
-
-                        <div class="skill-tags">
-
-                            <span>SDLC</span>
-                            <span>Testing</span>
-                            <span>Debugging</span>
-                            <span>Git</span>
-
-                        </div>
-
-                    </article>
+                    <p data-i18n="secondaryDescription">
+                        Completed secondary-level education.
+                    </p>
 
                 </div>
 
             </div>
 
-        </section>
+        </div>
+
+    </div>
+
+</section>
 
 
+<!-- =========================
+     EXPERIENCE
+========================= -->
+<section class="section experience-section" id="experience">
 
-        <!-- =========================
-             PROJECTS SECTION
-        ========================== -->
-        <section class="section projects-section" id="projects">
+    <div class="container">
 
-            <div class="container">
+        <div class="section-heading">
 
-                <div class="section-heading">
+            <span class="section-number">05</span>
 
-                    <span class="section-number">03</span>
+            <div>
+                <p class="section-label" data-i18n="experienceLabel">
+                    EXPERIENCE
+                </p>
 
-                    <div>
-                        <p class="section-label" data-i18n="projects.label">
-                            SELECTED WORK
-                        </p>
+                <h2 data-i18n="experienceTitle">
+                    Building through practice.
+                </h2>
+            </div>
 
-                        <h2 data-i18n="projects.title">
-                            Projects I'm building.
-                        </h2>
-                    </div>
+        </div>
+
+
+        <div class="experience-grid">
+
+            <div class="experience-card reveal">
+
+                <div class="experience-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+
+                <div>
+
+                    <span class="experience-type">
+                        Academic & Personal Projects
+                    </span>
+
+                    <h3 data-i18n="webExperience">
+                        Web Application Development
+                    </h3>
+
+                    <p data-i18n="webExperienceDescription">
+                        Developing responsive interfaces, implementing
+                        interactive functionality, debugging and
+                        improving web applications.
+                    </p>
+
+                    <ul>
+                        <li>Responsive web design</li>
+                        <li>JavaScript functionality</li>
+                        <li>Debugging and testing</li>
+                        <li>Git and GitHub workflows</li>
+                    </ul>
 
                 </div>
 
-
-                <div class="projects-grid">
-
-                    <!-- Project 1 -->
-                    <article class="project-card">
-
-                        <div class="project-top">
-
-                            <div class="project-icon">
-                                <i class="fa-solid fa-newspaper"></i>
-                            </div>
-
-                            <div class="project-links">
-
-                                <a
-                                    href="#"
-                                    aria-label="Project repository"
-                                >
-                                    <i class="fa-brands fa-github"></i>
-                                </a>
-
-                                <a
-                                    href="#"
-                                    aria-label="Live project"
-                                >
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </a>
-
-                            </div>
-
-                        </div>
+            </div>
 
 
-                        <span class="project-category">
-                            Web Platform
+            <div class="experience-card reveal">
+
+                <div class="experience-icon">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+
+                <div>
+
+                    <span class="experience-type">
+                        Academic Projects
+                    </span>
+
+                    <h3 data-i18n="databaseExperience">
+                        Database & Information Systems
+                    </h3>
+
+                    <p data-i18n="databaseExperienceDescription">
+                        Working with relational databases, SQL queries,
+                        structured data and information-system concepts.
+                    </p>
+
+                    <ul>
+                        <li>SQL queries</li>
+                        <li>Database design</li>
+                        <li>Data organization</li>
+                        <li>Information systems</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+<section class="section contact-section" id="contact">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-number">06</span>
+
+            <div>
+                <p class="section-label" data-i18n="contactLabel">
+                    CONTACT
+                </p>
+
+                <h2 data-i18n="contactTitle">
+                    Let's build something useful.
+                </h2>
+            </div>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <!-- Contact information -->
+            <div class="contact-info reveal">
+
+                <p
+                    class="contact-intro"
+                    data-i18n="contactIntro"
+                >
+                    Have a project idea, opportunity or question?
+                    Send me a message and I'll get back to you.
+                </p>
+
+
+                <div class="contact-items">
+
+                    <a
+                        href="mailto:your-email@example.com"
+                        class="contact-item"
+                    >
+
+                        <span class="contact-icon">
+                            <i class="fa-solid fa-envelope"></i>
                         </span>
 
-
-                        <h3 data-i18n="projects.rwanda.title">
-                            Rwanda 24
-                        </h3>
-
-
-                        <p data-i18n="projects.rwanda.text">
-                            A news platform concept designed to publish
-                            trending stories from Rwanda and around the world
-                            through a modern digital experience.
-                        </p>
-
-
-                        <div class="project-tech">
-
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- Project 2 -->
-                    <article class="project-card">
-
-                        <div class="project-top">
-
-                            <div class="project-icon">
-                                <i class="fa-solid fa-users"></i>
-                            </div>
-
-                            <div class="project-links">
-
-                                <a
-                                    href="#"
-                                    aria-label="Project repository"
-                                >
-                                    <i class="fa-brands fa-github"></i>
-                                </a>
-
-                                <a
-                                    href="#"
-                                    aria-label="Live project"
-                                >
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </a>
-
-                            </div>
-
-                        </div>
-
-
-                        <span class="project-category">
-                            Academic Project
+                        <span>
+                            <small>Email</small>
+                            <strong>
+                                your-email@example.com
+                            </strong>
                         </span>
 
-
-                        <h3 data-i18n="projects.student.title">
-                            Student Management System
-                        </h3>
-
-
-                        <p data-i18n="projects.student.text">
-                            A database-oriented application concept for
-                            managing student information, records and
-                            structured academic data.
-                        </p>
-
-
-                        <div class="project-tech">
-
-                            <span>Java</span>
-                            <span>SQL</span>
-                            <span>Database</span>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- Project 3 -->
-                    <article class="project-card">
-
-                        <div class="project-top">
-
-                            <div class="project-icon">
-                                <i class="fa-solid fa-laptop-code"></i>
-                            </div>
-
-                            <div class="project-links">
-
-                                <a
-                                    href="#"
-                                    aria-label="Project repository"
-                                >
-                                    <i class="fa-brands fa-github"></i>
-                                </a>
-
-                                <a
-                                    href="#"
-                                    aria-label="Live project"
-                                >
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </a>
-
-                            </div>
-
-                        </div>
-
-
-                        <span class="project-category">
-                            Personal Project
-                        </span>
-
-
-                        <h3 data-i18n="projects.portfolio.title">
-                            Personal Portfolio
-                        </h3>
-
-
-                        <p data-i18n="projects.portfolio.text">
-                            A responsive portfolio website created to showcase
-                            software engineering skills, projects, education
-                            and professional development.
-                        </p>
-
-
-                        <div class="project-tech">
-
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             EDUCATION SECTION
-        ========================== -->
-        <section class="section education-section" id="education">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <span class="section-number">04</span>
-
-                    <div>
-                        <p class="section-label" data-i18n="education.label">
-                            EDUCATION
-                        </p>
-
-                        <h2 data-i18n="education.title">
-                            My learning journey.
-                        </h2>
-                    </div>
-
-                </div>
-
-
-                <div class="timeline">
-
-                    <!-- Education Item -->
-                    <div class="timeline-item">
-
-                        <div class="timeline-dot"></div>
-
-                        <div class="timeline-content">
-
-                            <span class="timeline-date">
-                                Current
-                            </span>
-
-                            <h3 data-i18n="education.degree">
-                                Software Engineering
-                            </h3>
-
-                            <h4 data-i18n="education.faculty">
-                                Faculty of Information Technology
-                            </h4>
-
-                            <p data-i18n="education.degreeText">
-                                Developing knowledge in software development,
-                                programming, databases, systems analysis and
-                                modern information technology.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- Education Item -->
-                    <div class="timeline-item">
-
-                        <div class="timeline-dot"></div>
-
-                        <div class="timeline-content">
-
-                            <span class="timeline-date">
-                                Previous
-                            </span>
-
-                            <h3 data-i18n="education.secondary">
-                                Secondary Education
-                            </h3>
-
-                            <h4 data-i18n="education.secondarySchool">
-                                Secondary School
-                            </h4>
-
-                            <p data-i18n="education.secondaryText">
-                                Completed secondary-level education and
-                                developed the foundation for further studies
-                                in technology and software engineering.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             EXPERIENCE SECTION
-        ========================== -->
-        <section class="section experience-section" id="experience">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <span class="section-number">05</span>
-
-                    <div>
-                        <p class="section-label" data-i18n="experience.label">
-                            EXPERIENCE
-                        </p>
-
-                        <h2 data-i18n="experience.title">
-                            Learning through practical work.
-                        </h2>
-                    </div>
-
-                </div>
-
-
-                <div class="experience-list">
-
-                    <!-- Experience 1 -->
-                    <article class="experience-card">
-
-                        <div class="experience-icon">
-                            <i class="fa-solid fa-code"></i>
-                        </div>
-
-
-                        <div class="experience-content">
-
-                            <div class="experience-header">
-
-                                <div>
-                                    <span class="experience-type">
-                                        Academic & Personal Projects
-                                    </span>
-
-                                    <h3 data-i18n="experience.web.title">
-                                        Web Application Development
-                                    </h3>
-                                </div>
-
-                                <span class="experience-date">
-                                    Ongoing
-                                </span>
-
-                            </div>
-
-
-                            <p data-i18n="experience.web.text">
-                                Building responsive web interfaces and
-                                application concepts while practicing
-                                front-end development, debugging,
-                                usability and responsive design.
-                            </p>
-
-
-                            <ul class="experience-points">
-
-                                <li data-i18n="experience.web.point1">
-                                    Developed responsive interfaces using
-                                    HTML, CSS and JavaScript.
-                                </li>
-
-                                <li data-i18n="experience.web.point2">
-                                    Practiced debugging and improving
-                                    application functionality.
-                                </li>
-
-                                <li data-i18n="experience.web.point3">
-                                    Applied version-control concepts and
-                                    organized project files professionally.
-                                </li>
-
-                            </ul>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- Experience 2 -->
-                    <article class="experience-card">
-
-                        <div class="experience-icon">
-                            <i class="fa-solid fa-database"></i>
-                        </div>
-
-
-                        <div class="experience-content">
-
-                            <div class="experience-header">
-
-                                <div>
-                                    <span class="experience-type">
-                                        Academic Projects
-                                    </span>
-
-                                    <h3 data-i18n="experience.database.title">
-                                        Database & Information Systems
-                                    </h3>
-                                </div>
-
-                                <span class="experience-date">
-                                    Ongoing
-                                </span>
-
-                            </div>
-
-
-                            <p data-i18n="experience.database.text">
-                                Practicing relational database concepts and
-                                developing structured solutions for storing,
-                                retrieving and managing information.
-                            </p>
-
-
-                            <ul class="experience-points">
-
-                                <li data-i18n="experience.database.point1">
-                                    Created database structures and tables.
-                                </li>
-
-                                <li data-i18n="experience.database.point2">
-                                    Practiced SQL queries and data management.
-                                </li>
-
-                                <li data-i18n="experience.database.point3">
-                                    Applied concepts such as relationships,
-                                    normalization and data integrity.
-                                </li>
-
-                            </ul>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             CV CTA SECTION
-        ========================== -->
-        <section class="cv-section">
-
-            <div class="container">
-
-                <div class="cv-card">
-
-                    <div class="cv-content">
-
-                        <span class="section-label" data-i18n="cv.label">
-                            MY CV
-                        </span>
-
-                        <h2 data-i18n="cv.title">
-                            Want to know more about my journey?
-                        </h2>
-
-                        <p data-i18n="cv.text">
-                            Download my CV to explore my education, skills,
-                            projects and professional development.
-                        </p>
-
-                    </div>
+                    </a>
 
 
                     <a
-                        href="assets/Josee-CV.pdf"
-                        class="btn btn-light"
-                        download
+                        href="https://github.com/iradukunda-cyber"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-item"
                     >
-                        <i class="fa-solid fa-download"></i>
 
-                        <span data-i18n="cv.button">
-                            Download CV
+                        <span class="contact-icon">
+                            <i class="fa-brands fa-github"></i>
                         </span>
+
+                        <span>
+                            <small>GitHub</small>
+                            <strong>
+                                @iradukunda-cyber
+                            </strong>
+                        </span>
+
                     </a>
+
+
+                    <a
+                        href="https://www.linkedin.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-item"
+                    >
+
+                        <span class="contact-icon">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </span>
+
+                        <span>
+                            <small>LinkedIn</small>
+                            <strong>
+                                LinkedIn Profile
+                            </strong>
+                        </span>
+
+                    </a>
+
+
+                    <div class="contact-item">
+
+                        <span class="contact-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </span>
+
+                        <span>
+                            <small data-i18n="location">
+                                Location
+                            </small>
+
+                            <strong>
+                                Rwanda
+                            </strong>
+                        </span>
+
+                    </div>
 
                 </div>
 
             </div>
 
-        </section>
 
+            <!-- REAL NETLIFY CONTACT FORM -->
+            <div class="contact-form-wrapper reveal">
 
+                <form
+                    name="contact"
+                    method="POST"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                    class="contact-form"
+                    id="contactForm"
+                >
 
-        <!-- =========================
-             CONTACT SECTION
-        ========================== -->
-        <section class="section contact-section" id="contact">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <span class="section-number">06</span>
-
-                    <div>
-                        <p class="section-label" data-i18n="contact.label">
-                            CONTACT
-                        </p>
-
-                        <h2 data-i18n="contact.title">
-                            Let's build something useful.
-                        </h2>
-                    </div>
-
-                </div>
-
-
-                <div class="contact-grid">
-
-                    <!-- Contact Information -->
-                    <div class="contact-info">
-
-                        <p
-                            class="contact-intro"
-                            data-i18n="contact.intro"
-                        >
-                            Whether you want to discuss a project,
-                            collaboration or opportunity, feel free to
-                            get in touch.
-                        </p>
-
-
-                        <div class="contact-items">
-
-                            <!-- Email -->
-                            <a
-                                href="mailto:your-email@example.com"
-                                class="contact-item"
-                            >
-
-                                <div class="contact-icon">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </div>
-
-                                <div>
-                                    <span>Email</span>
-                                    <strong>
-                                        Iradukundajosee@gmail.com
-                                    </strong>
-                                </div>
-
-                            </a>
-
-
-                            <!-- Phone -->
-                            <a
-                                href="tel:+250000000000"
-                                class="contact-item"
-                            >
-
-                                <div class="contact-icon">
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-
-                                <div>
-                                    <span data-i18n="contact.phone">
-                                        Phone
-                                    </span>
-
-                                    <strong>
-                                        +250784025081
-                                    </strong>
-                                </div>
-
-                            </a>
-
-
-                            <!-- Location -->
-                            <div class="contact-item">
-
-                                <div class="contact-icon">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-
-                                <div>
-                                    <span data-i18n="contact.location">
-                                        Location
-                                    </span>
-
-                                    <strong>
-                                        Rwanda
-                                    </strong>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- Social -->
-                        <div class="contact-social">
-
-                            <span data-i18n="contact.follow">
-                                Follow me
-                            </span>
-
-                            <div class="social-links">
-
-                                <a
-                                    href="https://github.com/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="GitHub"
-                                >
-                                    <i class="fa-brands fa-github"></i>
-                                </a>
-
-                                <a
-                                    href="https://www.linkedin.com/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="LinkedIn"
-                                >
-                                    <i class="fa-brands fa-linkedin-in"></i>
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- Contact Form -->
-                    <form
-                        class="contact-form"
-                        id="contactForm"
+                    <!-- Required by Netlify for form identification -->
+                    <input
+                        type="hidden"
+                        name="form-name"
+                        value="contact"
                     >
 
-                        <div class="form-row">
-
-                            <div class="form-group">
-
-                                <label
-                                    for="name"
-                                    data-i18n="contact.form.name"
-                                >
-                                    Your Name
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="name"
-                                    name="name"
-                                    placeholder="Enter your name"
-                                    data-i18n-placeholder="contact.form.namePlaceholder"
-                                    required
-                                >
-
-                            </div>
+                    <!-- Honeypot spam protection -->
+                    <p class="hidden-honeypot">
+                        <label>
+                            Don't fill this out if you're human:
+                            <input
+                                name="bot-field"
+                                tabindex="-1"
+                                autocomplete="off"
+                            >
+                        </label>
+                    </p>
 
 
-                            <div class="form-group">
-
-                                <label
-                                    for="email"
-                                    data-i18n="contact.form.email"
-                                >
-                                    Your Email
-                                </label>
-
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    placeholder="Enter your email"
-                                    data-i18n-placeholder="contact.form.emailPlaceholder"
-                                    required
-                                >
-
-                            </div>
-
-                        </div>
-
+                    <div class="form-row">
 
                         <div class="form-group">
 
-                            <label
-                                for="subject"
-                                data-i18n="contact.form.subject"
-                            >
-                                Subject
+                            <label for="name" data-i18n="formName">
+                                Your Name
                             </label>
 
                             <input
                                 type="text"
-                                id="subject"
-                                name="subject"
-                                placeholder="What is this about?"
-                                data-i18n-placeholder="contact.form.subjectPlaceholder"
+                                id="name"
+                                name="name"
                                 required
+                                autocomplete="name"
+                                data-i18n-placeholder="namePlaceholder"
+                                placeholder="Enter your name"
                             >
 
                         </div>
@@ -1415,153 +1083,212 @@
 
                         <div class="form-group">
 
-                            <label
-                                for="message"
-                                data-i18n="contact.form.message"
-                            >
-                                Message
+                            <label for="email" data-i18n="formEmail">
+                                Email Address
                             </label>
 
-                            <textarea
-                                id="message"
-                                name="message"
-                                rows="6"
-                                placeholder="Write your message..."
-                                data-i18n-placeholder="contact.form.messagePlaceholder"
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
                                 required
-                            ></textarea>
+                                autocomplete="email"
+                                data-i18n-placeholder="emailPlaceholder"
+                                placeholder="you@example.com"
+                            >
 
                         </div>
 
+                    </div>
 
-                        <button
-                            type="submit"
-                            class="btn btn-primary form-submit"
+
+                    <div class="form-group">
+
+                        <label for="subject" data-i18n="formSubject">
+                            Subject
+                        </label>
+
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            required
+                            data-i18n-placeholder="subjectPlaceholder"
+                            placeholder="What would you like to discuss?"
                         >
 
-                            <span data-i18n="contact.form.send">
-                                Send Message
-                            </span>
-
-                            <i class="fa-solid fa-paper-plane"></i>
-
-                        </button>
+                    </div>
 
 
-                        <div
-                            class="form-message"
-                            id="formMessage"
-                        ></div>
+                    <div class="form-group">
 
-                    </form>
+                        <label for="message" data-i18n="formMessage">
+                            Message
+                        </label>
 
-                </div>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="7"
+                            required
+                            data-i18n-placeholder="messagePlaceholder"
+                            placeholder="Write your message here..."
+                        ></textarea>
 
-            </div>
-
-        </section>
-
-    </main>
-
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-    <footer class="footer">
-
-        <div class="container footer-container">
-
-            <div class="footer-brand">
-
-                <a href="#home" class="logo">
-
-                    <span class="logo-mark">
-                        IJ
-                    </span>
-
-                    <span class="logo-text">
-                        Iradukunda<span>.</span>
-                    </span>
-
-                </a>
-
-                <p data-i18n="footer.text">
-                    Building skills. Creating solutions. Growing through
-                    technology.
-                </p>
-
-            </div>
+                    </div>
 
 
-            <div class="footer-links">
+                    <button
+                        type="submit"
+                        class="btn btn-primary form-submit"
+                        id="submitButton"
+                    >
 
-                <a href="#about" data-i18n="nav.about">
-                    About
-                </a>
+                        <span id="submitText" data-i18n="sendMessage">
+                            Send Message
+                        </span>
 
-                <a href="#skills" data-i18n="nav.skills">
-                    Skills
-                </a>
+                        <i
+                            class="fa-solid fa-paper-plane"
+                            id="submitIcon"
+                        ></i>
 
-                <a href="#projects" data-i18n="nav.projects">
-                    Projects
-                </a>
+                        <span
+                            class="button-spinner"
+                            id="buttonSpinner"
+                        ></span>
 
-                <a href="#contact" data-i18n="nav.contact">
-                    Contact
-                </a>
-
-            </div>
+                    </button>
 
 
-            <div class="footer-bottom">
+                    <div
+                        class="form-status"
+                        id="formStatus"
+                        role="status"
+                        aria-live="polite"
+                    ></div>
 
-                <p>
-                    © <span id="currentYear"></span>
-                    Iradukunda Josee.
-                    <span data-i18n="footer.rights">
-                        All rights reserved.
-                    </span>
-                </p>
-
-                <p>
-                    <span data-i18n="footer.built">
-                        Designed & built with
-                    </span>
-
-                    <i class="fa-solid fa-heart"></i>
-
-                    <span data-i18n="footer.by">
-                        by Iradukunda Josee
-                    </span>
-                </p>
+                </form>
 
             </div>
 
         </div>
 
-    </footer>
+    </div>
+
+</section>
 
 
+<!-- =========================
+     CV CTA
+========================= -->
+<section class="cv-cta">
 
-    <!-- =========================
-         BACK TO TOP
-    ========================== -->
-    <button
-        class="back-to-top"
-        id="backToTop"
-        aria-label="Back to top"
-    >
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
+    <div class="container cv-cta-inner">
+
+        <div>
+
+            <span class="section-label">
+                GET TO KNOW ME
+            </span>
+
+            <h2 data-i18n="cvTitle">
+                Want to know more about my background?
+            </h2>
+
+        </div>
+
+        <a
+            href="assets/Josee-CV.pdf"
+            class="btn btn-light"
+            target="_blank"
+            rel="noopener"
+        >
+            <i class="fa-solid fa-file-arrow-down"></i>
+            <span data-i18n="downloadCV">
+                Download CV
+            </span>
+        </a>
+
+    </div>
+
+</section>
+
+</main>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+<footer class="footer">
 
-    <!-- =========================
-         JAVASCRIPT
-    ========================== -->
-    <script src="script.js"></script>
+    <div class="container footer-inner">
+
+        <div>
+
+            <a href="#home" class="logo footer-logo">
+                <span>IJ</span>
+            </a>
+
+            <p data-i18n="footerText">
+                Building skills, solving problems and creating
+                useful digital experiences.
+            </p>
+
+        </div>
+
+
+        <div class="footer-social">
+
+            <a
+                href="https://github.com/iradukunda-cyber"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+            >
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+            >
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+        </div>
+
+
+        <p class="copyright">
+            © <span id="currentYear"></span>
+            Iradukunda Josee.
+            <span data-i18n="rights">
+                All rights reserved.
+            </span>
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- Scroll progress -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+
+<!-- Back to top -->
+<button
+    class="back-to-top"
+    id="backToTop"
+    aria-label="Back to top"
+>
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
